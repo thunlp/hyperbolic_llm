@@ -1,0 +1,4 @@
+{
+    "python.pythonPath": "/home/hx/miniconda3/envs/cwz/bin/python",
+    "python.formatting.provider": "yapf"
+}

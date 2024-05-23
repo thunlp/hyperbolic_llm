@@ -1,0 +1,23 @@
+python3 run_rp.py \
+--dataset_tag conll2009 \
+--train_path ../data/download/srl/conll2009/role_prediction/train  \
+--dev_path ../data/download/srl/conll2009/role_prediction/dev  \
+--max_tokens 1024 \
+--max_epochs 8 \
+--lr 8e-6 \
+--max_grad_norm 1 \
+--warmup_ratio -1 \
+--predict \
+--save \
+--save_path results/srl/rp/conll09/8e-6 \
+--checkpoint_path results/srl/rp/conll09/8e-6 \
+--tensorboard \
+--init_checkpoint ./results/large_dp=0.1_attdp=0.1_lr=6e-4_step=30000/checkpoints/ckpt_33000.pt \
+--test_path ../data/download/srl/conll2009 \
+--dataset_path ../data/download/srl/conll2009/test_brown.english.psense.conll09.json \
+--output_path ../data/download/srl/conll2009/test_brown.english.psense.plabel.conll09.json \
+--checkpoint_path results/srl/rp/conll09/8e-6/best_model.pt  \
+--max_tokens 2048 \
+--alpha 5 \
+--tqdm_mininterval 1
+#cat log_rp.txt
